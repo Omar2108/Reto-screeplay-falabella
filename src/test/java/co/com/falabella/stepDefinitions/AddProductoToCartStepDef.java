@@ -11,6 +11,7 @@ import org.hamcrest.Matchers;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 
 public class AddProductoToCartStepDef {
+
     @CastMember
     Actor user;
 
@@ -21,8 +22,8 @@ public class AddProductoToCartStepDef {
                 HomeTask.search()
         );
     }
-    @When("the user adds the product to the shopping cart")
-    public void theUserAddsTheProductToTheShoppingCart() {
+    @When("the user adds the product to the shopping cart randomly")
+    public void theUserAddsTheProductToTheShoppingCartRandomly() {
 
         user.attemptsTo(
                 ProductsCatalogTask.on(),
