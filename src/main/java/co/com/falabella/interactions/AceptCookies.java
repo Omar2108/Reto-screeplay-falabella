@@ -14,6 +14,7 @@ public class AceptCookies implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         JavascriptExecutor js = (JavascriptExecutor) BrowseTheWeb.as(actor).getDriver();
         js.executeScript("arguments[0].click()", BTN_COOKIES.resolveFor(actor));
+
     }
 
     public static Performable click(){

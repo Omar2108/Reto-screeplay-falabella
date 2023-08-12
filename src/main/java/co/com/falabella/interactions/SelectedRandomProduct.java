@@ -23,8 +23,8 @@ public class SelectedRandomProduct implements Interaction {
         int index = random.nextInt(listLink.size());
 
         JavascriptExecutor js = (JavascriptExecutor) BrowseTheWeb.as(actor).getDriver();
-        js.executeScript("arguments[0].click()", listLink.get(index));
-
+        js.executeScript("arguments[0].scrollIntoView();", listLink.get(index));
+        listLink.get(index).click();
 
     }
 

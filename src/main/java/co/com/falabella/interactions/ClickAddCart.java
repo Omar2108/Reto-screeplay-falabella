@@ -18,7 +18,8 @@ public class ClickAddCart implements Interaction {
 
         WebElementFacade linkProduct = BTN_ADD_PRODUCT.resolveFor(actor);
         JavascriptExecutor js = (JavascriptExecutor)BrowseTheWeb.as(actor).getDriver();
-        js.executeScript("arguments[0].click()", linkProduct );
+        js.executeScript("arguments[0].scrollIntoView();", linkProduct);
+        linkProduct.click();
     }
 
     public static Performable click(){

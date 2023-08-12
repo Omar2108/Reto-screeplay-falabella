@@ -6,7 +6,6 @@ import co.com.falabella.tasks.*;
 import io.cucumber.java.en.*;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.annotations.CastMember;
-import net.serenitybdd.screenplay.targets.EnsureFieldVisible;
 import org.hamcrest.Matchers;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;

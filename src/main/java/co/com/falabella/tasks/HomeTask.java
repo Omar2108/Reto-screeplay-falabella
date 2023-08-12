@@ -4,7 +4,6 @@ import co.com.falabella.interactions.AceptCookies;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Enter;
-import net.serenitybdd.screenplay.actions.Switch;
 import org.openqa.selenium.Keys;
 import co.com.falabella.utils.Data;
 
