@@ -15,6 +15,7 @@ public class AceptCookies implements Interaction {
         JavascriptExecutor js = (JavascriptExecutor) BrowseTheWeb.as(actor).getDriver();
         js.executeScript("arguments[0].click()", BTN_COOKIES.resolveFor(actor));
 
+        js.executeScript("document.getElementsByClassName('airship-html-prompt-shadow')[0].shadowRoot.querySelector('button').click()");
     }
 
     public static Performable click(){
