@@ -5,6 +5,8 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Performable;
 
+import java.util.Random;
+
 import static co.com.falabella.ui.DetailProductUI.BTN_QUANTITY;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -13,7 +15,9 @@ public class AddQuantityProduct implements Interaction {
     public <T extends Actor> void performAs(T actor) {
         WebElementFacade btnquantity = BTN_QUANTITY.resolveFor(actor);
 
-        for (int i = 1; i < 3; i++) {
+        Random random = new Random();
+        int index = random.nextInt(3);
+        for (int i = 1; i < index; i++) {
             btnquantity.click();
         }
     }

@@ -1,11 +1,11 @@
 package co.com.falabella.tasks;
 
-import co.com.falabella.interactions.AceptCookies;
+import co.com.falabella.interactions.MessageClosed;
+import co.com.falabella.utils.ProductService;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Enter;
 import org.openqa.selenium.Keys;
-import co.com.falabella.utils.Data;
 
 import static co.com.falabella.ui.HomeUI.TXT_SEARCH;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -13,9 +13,10 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 public class HomeTask implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
+
         actor.attemptsTo(
-                AceptCookies.click(),
-                Enter.theValue(Data.extractTo().get(0).get("Search")).into(TXT_SEARCH).thenHit(Keys.ENTER)
+                MessageClosed.click(),
+                Enter.theValue(ProductService.getSearchProduct()).into(TXT_SEARCH).thenHit(Keys.ENTER)
         );
     }
 

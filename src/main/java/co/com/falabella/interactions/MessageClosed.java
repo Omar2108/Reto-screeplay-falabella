@@ -9,7 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import static co.com.falabella.ui.HomeUI.BTN_COOKIES;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class AceptCookies implements Interaction {
+public class MessageClosed implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         JavascriptExecutor js = (JavascriptExecutor) BrowseTheWeb.as(actor).getDriver();
@@ -19,6 +19,6 @@ public class AceptCookies implements Interaction {
     }
 
     public static Performable click(){
-        return instrumented(AceptCookies.class);
+        return instrumented(MessageClosed.class);
     }
 }

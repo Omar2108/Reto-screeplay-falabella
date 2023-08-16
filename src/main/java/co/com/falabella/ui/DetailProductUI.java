@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 public class DetailProductUI {
     public static Target TXT_NAME_PRODUCT = Target.the("product name")
-            .locatedBy("//h1[@class='jsx-1680787435 product-name fa--product-name false']");
+            .located(By.xpath("//h1[@class='jsx-1680787435 product-name fa--product-name false']"));
     public static Target BTN_ADD_PRODUCT = Target.the("adding product")
             .located(By.id("add-to-cart-button"));
     public static Target BTN_QUANTITY = Target.the("adding quantity product")

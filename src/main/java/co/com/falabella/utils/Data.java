@@ -1,6 +1,6 @@
 package co.com.falabella.utils;
 /*
- * @(#) Data.java 11.0
+ * @(#) Products.java 11.0
  * Copyright 2023 SQA. Todos los derechos reservados.
  */
 
