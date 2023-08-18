@@ -72,7 +72,7 @@ public class ConnectionDB {
             Class.forName(DRIVER);
             conn = DriverManager.getConnection(URL,USER,PASSWORD);
         } catch (ClassNotFoundException | SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(),"Error al conectar con la base de datos", JOptionPane.ERROR_MESSAGE);
+            System.out.println("Error al conectar con la base de datos");
             System.exit(0);
         }
         return conn;
@@ -83,7 +83,7 @@ public class ConnectionDB {
             conn.close();
 
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage(),"Error al cerrar la conexion con la base de datos", JOptionPane.ERROR_MESSAGE);
+            System.out.println("Error al cerrar la conexion con la base de datos");
         }
     }
     
